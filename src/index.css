@@ -45,8 +45,8 @@ body {
   position: absolute;
   content: "";
   width: 0%;
-  height: 1px;
-  background-color: var(--color-light);
+  height: 2px;
+  background: linear-gradient(80deg, var(--color-light), red);
   bottom: -2px;
   left: 50%;
   transform: translateX(-50%);
@@ -122,4 +122,18 @@ body {
 .circle-right {
   bottom: -60%;
   right: -20%;
+}
+
+.section-title {
+  position: absolute;
+  font-size: 10rem;
+  line-height: 1;
+  font-family: "Cosi Azure", sans-serif;
+  mix-blend-mode: color-dodge;
+}
+
+.project-right {
+  height: 500px;
+  width: 500px;
+  overflow: hidden;
 }

@@ -1,19 +1,61 @@
+import Project from "./Project";
+const data = [
+  {
+    id: 1,
+    title: "TORQUE XRREME-A CAR REPAIR SERVICES",
+    img1: "https://res.cloudinary.com/dbuszqydh/image/upload/v1706022886/Personal-portfolio2/FreshCart-eCommerce-HTML-Template-600x450_ujjxmm.webp",
+    img2: "https://res.cloudinary.com/dbuszqydh/image/upload/v1706022884/Personal-portfolio2/Booking-Multipurpose-Online-Booking-Theme-600x450_g10jaz.webp",
+    description:
+      "lorem ipsum dolor sit amet, consectetur adip lorem ipsum dolor sit amet lore mauris. Cum sociis natoque penatibus et just preceding the sea of the sea was the most convenient",
+    tools: [
+      "NodeJS",
+      "ExpressJS",
+      "jQuery",
+      "MongoDB",
+      "JWT",
+      "ReactJS",
+      "Firebase",
+      "Tailwindcss",
+    ],
+    liveLink: "https://github.com/",
+    frontEndLink: "https://github.com/",
+    backEndLink: "https://github.com/",
+  },
+  {
+    id: 2,
+    title: "TORQUE XRREME-A CAR REPAIR SERVICES",
+    img1: "https://res.cloudinary.com/dbuszqydh/image/upload/v1706022886/Personal-portfolio2/FreshCart-eCommerce-HTML-Template-600x450_ujjxmm.webp",
+    img2: "https://res.cloudinary.com/dbuszqydh/image/upload/v1706022884/Personal-portfolio2/Booking-Multipurpose-Online-Booking-Theme-600x450_g10jaz.webp",
+    description:
+      "lorem ipsum dolor sit amet, consectetur adip lorem ipsum dolor sit amet lore mauris. Cum sociis natoque penatibus et just preceding the sea of the sea was the most convenient",
+    tools: [
+      "NodeJS",
+      "ExpressJS",
+      "jQuery",
+      "MongoDB",
+      "JWT",
+      "ReactJS",
+      "Firebase",
+      "Tailwindcss",
+    ],
+    liveLink: "https://github.com/",
+    frontEndLink: "https://github.com/",
+    backEndLink: "https://github.com/",
+  },
+];
+
 const Projects = () => {
   return (
-    <div className="mt-40 " id="project">
-      <p>
-        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eveniet ipsa
-        commodi quam eaque facere. Facilis minus quidem reiciendis hic, esse
-        distinctio soluta molestiae provident ipsum, doloremque odit. Dolorum
-        tempore officiis, voluptas quod voluptatum corporis delectus amet rem
-        autem nulla fugit at consequatur quam eveniet in eos unde exercitationem
-        quibusdam, optio nisi nam impedit aspernatur facere? Quis et cum
-        doloremque exercitationem sapiente rem enim, vero tempora molestiae
-        excepturi esse id, ut atque quas officiis. Praesentium vero facere dicta
-        corporis alias eos cum maxime dignissimos autem enim. Consequatur
-        repellat facilis, sit commodi ad illum! Doloribus sit voluptas debitis
-        tempora maiores fuga iure!
-      </p>
+    <div className="projects container mx-auto mt-40 " id="project">
+      <div className=" overflow-hidden">
+        <h2 className="section-title">Projects</h2>
+      </div>
+
+      <div className="projects-wrapper mt-40 flex flex-col gap-40">
+        {data.map((project) => (
+          <Project project={project} key={project.id} />
+        ))}
+      </div>
     </div>
   );
 };
