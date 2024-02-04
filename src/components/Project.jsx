@@ -23,9 +23,37 @@ const Project = ({ project }) => {
             <span key={i}>{tool}</span>
           ))}
         </span>
+        <div className="btn flex gap-10 my-10 flex-wrap">
+          <a
+            href={project.liveLink}
+            target="_blank"
+            rel=" noreferrer"
+            className=" text-2xl uppercase border rounded-full border-white/20 py-6 px-14 hover:bg-cyan-400/50 hover:border-white duration-300"
+          >
+            Live Site
+          </a>
+          <a
+            href={project.backEndLink}
+            target="_blank"
+            rel=" noreferrer"
+            className=" text-2xl uppercase border rounded-full border-white/20 py-6 px-14 hover:bg-cyan-400/50 hover:border-white duration-300"
+          >
+            frond-end code
+          </a>
+          {project?.backEndLink && (
+            <a
+              href={project.frontEndLink}
+              target="_blank"
+              rel=" noreferrer"
+              className=" text-2xl uppercase border rounded-full border-white/20 py-6 px-14 hover:bg-cyan-400/50 hover:border-white duration-300"
+            >
+              back-End code
+            </a>
+          )}
+        </div>
       </div>
       <div
-        className="project-right col-span-2 justify-self-end "
+        className="project-right col-span-2 justify-self-end cursor-pointer rounded-md"
         ref={projectRightRef}
       ></div>
     </div>

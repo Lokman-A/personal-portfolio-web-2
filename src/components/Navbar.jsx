@@ -1,11 +1,20 @@
 import { HashLink } from "react-router-hash-link";
 
-const Navbar = () => {
+// eslint-disable-next-line react/prop-types
+const Navbar = ({ footerNav }) => {
   return (
-    <div className="navbar mt-20 flex justify-between container mx-auto uppercase">
+    <div
+      className={`navbar ${
+        footerNav ? "mt-52" : "mt-20"
+      } flex justify-between container mx-auto uppercase`}
+    >
       <div className=" logo">
-        <HashLink className="link-item" smooth to="#home">
-          Lokman Hakim
+        <HashLink
+          className={` ${footerNav ? ""  : "font-extrabold"} link-item text-4xl `}
+          smooth
+          to="#home"
+        >
+          {footerNav ? "Goto Top" : "Lokman Hakim"}
         </HashLink>
       </div>
       <ul className="links flex flex-col gap-3">

@@ -11,9 +11,9 @@ const App = () => {
       <div className=" min-h-screen">
         <Routes>
           <Route path="/" element={<Home />} />
-        </Routes>
+        </Routes>{" "}
+        <Navbar footerNav /> <Footer />
       </div>
-      <Footer />
     </div>
   );
 };
