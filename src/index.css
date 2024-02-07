@@ -33,10 +33,6 @@ body {
   word-spacing: 3px;
 }
 
-.app {
-  position: relative;
-}
-
 .link-item {
   position: relative;
 }
@@ -125,7 +121,6 @@ body {
 }
 
 .section-title {
-  position: absolute;
   font-size: 10rem;
   line-height: 1;
   font-family: "Cosi Azure", sans-serif;

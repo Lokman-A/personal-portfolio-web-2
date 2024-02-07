@@ -10,7 +10,9 @@ const Navbar = ({ footerNav }) => {
     >
       <div className=" logo">
         <HashLink
-          className={` ${footerNav ? ""  : "font-extrabold"} link-item text-4xl `}
+          className={` ${
+            footerNav ? "" : "font-extrabold"
+          } link-item text-4xl `}
           smooth
           to="#home"
         >

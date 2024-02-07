@@ -8,11 +8,12 @@ const App = () => {
     <div className="app">
       <div className="noise"></div>
       <Navbar />
-      <div className=" min-h-screen">
+      <div>
         <Routes>
           <Route path="/" element={<Home />} />
-        </Routes>{" "}
-        <Navbar footerNav /> <Footer />
+        </Routes>
+        <Navbar footerNav />
+        <Footer />
       </div>
     </div>
   );
