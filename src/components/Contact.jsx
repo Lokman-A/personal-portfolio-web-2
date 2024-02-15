@@ -1,14 +1,28 @@
+import { useRef } from "react";
 import SectionTitle from "./SectionTitle";
+import { useFormControlReveal } from "../hooks/gsap";
 
 const Contact = () => {
+  const formControl1Ref = useRef(null);
+  const formControl2Ref = useRef(null);
+  const formControl3Ref = useRef(null);
+  const formControl4Ref = useRef(null);
+  const formControlArr = [
+    formControl1Ref,
+    formControl2Ref,
+    formControl3Ref,
+    formControl4Ref,
+  ];
+
+  useFormControlReveal(formControlArr);
   const sendEmail = (e) => {
     e.preventDefault();
-    // Email JS
+    // Email JS integration
     e.target.querySelector(".fullname").value = "";
     e.target.querySelector(".email").value = "";
     e.target.querySelector(".message").value = "";
-    e.target.querySelector(".send-message").value = "";
   };
+
   return (
     <div className="contact mt-40" id="contact">
       <SectionTitle title="Contact" />
@@ -19,6 +33,7 @@ const Contact = () => {
       >
         <div className="form-control overflow-hidden">
           <input
+            ref={formControl1Ref}
             type="text"
             name="fullname"
             required
@@ -28,6 +43,7 @@ const Contact = () => {
         </div>
         <div className="form-control overflow-hidden">
           <input
+            ref={formControl2Ref}
             type="email"
             name="email"
             required
@@ -37,6 +53,7 @@ const Contact = () => {
         </div>
         <div className="form-control overflow-hidden">
           <textarea
+            ref={formControl3Ref}
             placeholder="Write your message"
             name="message"
             required
@@ -47,6 +64,7 @@ const Contact = () => {
         </div>
         <div className="form-control overflow-hidden">
           <input
+            ref={formControl4Ref}
             type="submit"
             value="Send message"
             className="send-message uppercase py-16 px-28 border border-white/20 hover:bg-cyan-400/20 duration-500 rounded-full hover:border-cyan-400 w-full"

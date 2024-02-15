@@ -8,7 +8,7 @@ const data = [
 
 const Socials = () => {
   return (
-    <div className="socials mt-40">
+    <div className="socials mt-40 overflow-hidden">
       <div className="socials-wrapper mt-40 flex gap-10 fixed top-[70%] right-[5%] rotate-90 origin-right">
         {data.map((social) => (
           <a

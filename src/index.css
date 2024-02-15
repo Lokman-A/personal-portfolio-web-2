@@ -9,6 +9,11 @@
   src: url(./assets//fonts/CosiAzure-Bold.ttf);
 }
 
+/* *,
+*::after,
+*::before {
+} */
+
 :root {
   --color-dark: #050505;
   --color-light: #f7f7f7;
@@ -146,8 +151,13 @@ body {
 }
 
 .skill-item::before {
-  width: 100%;
+  width: 0%;
   opacity: 0.1;
+  transition: 2.5s;
+}
+
+.skill-item.reveal::before {
+  width: 100%;
 }
 
 .skill-item::after {

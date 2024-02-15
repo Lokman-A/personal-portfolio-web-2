@@ -1,7 +1,12 @@
+import { useRef } from "react";
+import { useBioReveal } from "../hooks/gsap";
+
 const Bio = () => {
+  const bioRef = useRef(null);
+  useBioReveal(bioRef, 2.4);
   return (
-    <div className="container mx-auto mt-20">
-      <p>
+    <div className="container mx-auto mt-20 overflow-hidden">
+      <p ref={bioRef}>
         Lorem ipsum dolor sit, amet consectetur adipisicing elit. Enim, sit
         voluptates perspiciatis ut ipsum vel! Neque cum quibusdam accusamus
         iusto laboriosam corporis doloribus iure natus, suscipit unde harum

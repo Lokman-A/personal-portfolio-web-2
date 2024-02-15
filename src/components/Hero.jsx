@@ -1,5 +1,10 @@
 import { useRef } from "react";
 import { useHoverEffect } from "../hooks/useHoverEffect";
+import {
+  useGsapTitleRevealLeft,
+  useGsapTitleRevealRight,
+  useHeroImageReveal,
+} from "../hooks/gsap";
 
 const data = {
   img1: "https://res.cloudinary.com/dbuszqydh/image/upload/v1706971950/Personal-portfolio2/Lokman-removebg_qmyhwd.png",
@@ -8,6 +13,12 @@ const data = {
 
 const Hero = () => {
   const heroImageRef = useRef(null);
+  const title1Ref = useRef(null);
+  const title2Ref = useRef(null);
+
+  useHeroImageReveal(heroImageRef);
+  useGsapTitleRevealLeft(title1Ref, 2);
+  useGsapTitleRevealRight(title2Ref, 2);
 
   useHoverEffect(heroImageRef, data.img1, data.img2);
   return (
@@ -17,10 +28,10 @@ const Hero = () => {
         ref={heroImageRef}
       ></div>
       <div className="shutter shutter-left overflow-hidden">
-        <h1>Full Stack</h1>
+        <h1 ref={title1Ref}>Full Stack</h1>
       </div>
       <div className="shutter shutter-right overflow-hidden">
-        <h1>Developer</h1>
+        <h1 ref={title2Ref}>Developer</h1>
       </div>
       <div className="circle-left"></div>
       <div className="circle-right"></div>

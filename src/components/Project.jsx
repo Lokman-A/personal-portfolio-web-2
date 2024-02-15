@@ -1,14 +1,18 @@
 /* eslint-disable react/prop-types */
 import { useRef } from "react";
 import { useHoverEffect } from "../hooks/useHoverEffect";
+import { useProjectLeftRightReveal } from "../hooks/gsap";
 
 const Project = ({ project }) => {
   const projectRightRef = useRef(null);
+  const projectLeftRef = useRef(null);
+  const projectArr = [projectLeftRef, projectRightRef];
 
   useHoverEffect(projectRightRef, project.img1, project.img2);
+  useProjectLeftRightReveal(projectArr);
   return (
-    <div className="project grid grid-cols-5">
-      <div className="project-left col-span-3 my-40 ">
+    <div className="project grid grid-cols-5 overflow-hidden">
+      <div className="project-left col-span-3 my-40 " ref={projectLeftRef}>
         <span className="text-8xl text-white/20 ">
           {String(project.id).padStart(2, 0)}
         </span>
