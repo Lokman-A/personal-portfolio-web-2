@@ -24,11 +24,11 @@ const Hero = () => {
   return (
     <div className="hero container mx-auto mt-20  flex justify-center items-center">
       <div
-        className="hero-image cursor-pointer rounded-full"
+        className="hero-image cursor-pointer rounded-sm"
         ref={heroImageRef}
       ></div>
       <div className="shutter shutter-left overflow-hidden">
-        <h1 ref={title1Ref}>Full Stack</h1>
+        <h1 ref={title1Ref}>Fron-End</h1>
       </div>
       <div className="shutter shutter-right overflow-hidden">
         <h1 ref={title2Ref}>Developer</h1>

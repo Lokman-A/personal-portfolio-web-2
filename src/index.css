@@ -9,14 +9,15 @@
   src: url(./assets//fonts/CosiAzure-Bold.ttf);
 }
 
-/* *,
-*::after,
-*::before {
-} */
-
 :root {
   --color-dark: #050505;
   --color-light: #f7f7f7;
+}
+
+*,
+*::after,
+*::before {
+  cursor: none;
 }
 
 html,
@@ -36,6 +37,11 @@ body {
   line-height: 1.6;
   letter-spacing: 2px;
   word-spacing: 3px;
+}
+
+input[type="submit"] {
+  letter-spacing: inherit;
+  word-spacing: inherit;
 }
 
 .link-item {
@@ -69,6 +75,42 @@ body {
   width: 100vw;
   z-index: -1500;
   opacity: 0.06;
+}
+
+.inner-cursor {
+  position: fixed;
+  background-color: var(--color-light);
+  width: 10px;
+  height: 10px;
+  left: 10px;
+  top: 10px;
+  z-index: 99999;
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  mix-blend-mode: difference;
+  pointer-events: none;
+  transition: width 0.5, height 0.5;
+}
+
+.inner-cursor.grow {
+  width: 25px;
+  height: 25px;
+  transition: width 0.5, height 0.5;
+}
+
+.outer-cursor {
+  position: fixed;
+  width: 25px;
+  height: 25px;
+  left: 10px;
+  top: 10px;
+  z-index: 99999;
+  border: 1px solid white;
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  mix-blend-mode: difference;
+  pointer-events: none;
+  transition: 0.1s;
 }
 
 .hero {

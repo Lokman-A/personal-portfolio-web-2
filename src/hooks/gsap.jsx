@@ -19,6 +19,22 @@ export const useHeroImageReveal = (el, delay = 0) => {
     );
   }, [el, delay]);
 };
+export const useSocialReveal = (el, delay = 0) => {
+  useEffect(() => {
+    gsap.fromTo(
+      el.current,
+      {
+        x: 800,
+      },
+      {
+        x: 0,
+        duration: 2,
+        delay,
+        ease: "power1.out",
+      }
+    );
+  }, [el, delay]);
+};
 
 export const useGsapTitleRevealLeft = (el, delay = 0) => {
   useEffect(() => {
